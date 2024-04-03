@@ -7,8 +7,9 @@ import LOGOImage from '../../components/LOGOImage/LOGOImage';
 import styles from '../../utils/styles';
 import History from '../History';
 import Flashcards from '../Flashcards';
+import Description from '../Description';
 
-export function MainScreen({ navigation }) {
+export function Home({ navigation }) {
    
     const handlePressHistory = () => {
       navigation.navigate('History');
@@ -17,6 +18,10 @@ export function MainScreen({ navigation }) {
       const handlePressFlashcards = () => {
         navigation.navigate('Flashcards');
         };
+
+        const handlePressDescription = () => {
+          navigation.navigate('Description');
+          };
 
     return (
       
@@ -29,30 +34,27 @@ export function MainScreen({ navigation }) {
 
             <View style={{marginTop: '10%', flexDirection: 'row', justifyContent: 'space-around' }}>
            <CustomButton text="Historia" onPress={handlePressHistory}/>
-
            <CustomButton text="Fiszki" onPress={handlePressFlashcards}/>
         </View>
         
         <View style={{marginTop: '10%', marginBottom: '1%', flexDirection: 'row', justifyContent: 'space-around' }}>
            
            <ImageButton
-        onPress={handlePressFlashcards}
         imageSource={require('../../../public/Poland.png')}
       />
        <ImageButton
-        onPress={handlePressFlashcards}
         imageSource={require('../../../public/UK.png')}
       />
         </View>
-        <CustomTextInput/>
-        <Button
-        title="Szukaj"
-        color="#000000"
-         />
        
+        <CustomTextInput/>
+
+        <Button title="Szukaj" color="#000000"
+        onPress={handlePressDescription}
+         />
        
         </View>
     );
 };
 
-export default MainScreen
+export default Home
