@@ -5,14 +5,18 @@ import ImageButton from '../../components/ImageButton/ImageButton';
 import CustomTextInput from '../../components/TextInput/TextInput';
 import LOGOImage from '../../components/LOGOImage/LOGOImage';
 import styles from '../../utils/styles';
+import History from '../History';
+import Flashcards from '../Flashcards';
 
-
-
-export function Home({ navigation }) {
+export function MainScreen({ navigation }) {
    
-    const handlePress = () => {
-        console.log('Przycisk został kliknięty!');
+    const handlePressHistory = () => {
+      navigation.navigate('History');
       };
+
+      const handlePressFlashcards = () => {
+        navigation.navigate('Flashcards');
+        };
 
     return (
       
@@ -24,18 +28,19 @@ export function Home({ navigation }) {
             </View>
 
             <View style={{marginTop: '10%', flexDirection: 'row', justifyContent: 'space-around' }}>
-           <CustomButton text="Historia"/>
-           <CustomButton text="Ulubione"/>
+           <CustomButton text="Historia" onPress={handlePressHistory}/>
+
+           <CustomButton text="Fiszki" onPress={handlePressFlashcards}/>
         </View>
         
         <View style={{marginTop: '10%', marginBottom: '1%', flexDirection: 'row', justifyContent: 'space-around' }}>
            
            <ImageButton
-        onPress={handlePress}
+        onPress={handlePressFlashcards}
         imageSource={require('../../../public/Poland.png')}
       />
        <ImageButton
-        onPress={handlePress}
+        onPress={handlePressFlashcards}
         imageSource={require('../../../public/UK.png')}
       />
         </View>
@@ -49,3 +54,5 @@ export function Home({ navigation }) {
         </View>
     );
 };
+
+export default MainScreen
