@@ -6,7 +6,7 @@ import { questions } from "../Flashcards/questions";
 import { useRoute } from "@react-navigation/native";
 import Swiper from "react-native-deck-swiper";
 
-export default function flashcard() {
+export default function Flashcard() {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   let questionList = Object.values(questions[0].pl.questions);
   const { deck } = useRoute().params;
@@ -69,43 +69,45 @@ export default function flashcard() {
         cards={cards}
         renderCard={renderCard}
         backgroundColor="transparent"
-        onSwiped={(cardIndex) => { setCurrentQuestionIndex(cardIndex + 1); }}
+        onSwiped={(cardIndex) => {
+          setCurrentQuestionIndex(cardIndex + 1);
+        }}
         overlayLabels={{
           left: {
-            title: 'NOT YET',
+            title: "NOT YET",
             style: {
               label: {
                 backgroundColor: "red",
-                borderColor: 'black',
-                color: 'white',
-                borderWidth: 1
+                borderColor: "black",
+                color: "white",
+                borderWidth: 1,
               },
               wrapper: {
-                flexDirection: 'column',
-                alignItems: 'flex-end',
-                justifyContent: 'flex-start',
+                flexDirection: "column",
+                alignItems: "flex-end",
+                justifyContent: "flex-start",
                 marginTop: 30,
-                marginLeft: -30
-              }
-            }
+                marginLeft: -30,
+              },
+            },
           },
           right: {
-            title: 'GOT IT',
+            title: "GOT IT",
             style: {
               label: {
                 backgroundColor: "green",
-                borderColor: 'black',
-                color: 'white',
-                borderWidth: 1
+                borderColor: "black",
+                color: "white",
+                borderWidth: 1,
               },
               wrapper: {
-                flexDirection: 'column',
-                alignItems: 'flex-start',
-                justifyContent: 'flex-start',
+                flexDirection: "column",
+                alignItems: "flex-start",
+                justifyContent: "flex-start",
                 marginTop: 30,
-                marginLeft: 30
-              }
-            }
+                marginLeft: 30,
+              },
+            },
           },
         }}
       ></Swiper>
