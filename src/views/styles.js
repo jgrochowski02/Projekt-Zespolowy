@@ -163,11 +163,16 @@ export const styles = StyleSheet.create({
     marginBottom: 10,
   },
   view: {
+    flex: 1,
     justifyContent: "center",
     alignItems: "center",
-marginTop:"20%",
-    width: 400,
-    height: 400,
+  },
+  cardContainer: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    width: width - 40,
+    height: height / 2,
   },
   flipCard: {
     backgroundColor: White,
@@ -178,25 +183,29 @@ marginTop:"20%",
       height: 5,
       width: 5,
     },
-    width: 300,
-    height: 200,
-    marginTop: 5,
+    width: 280,  // reduced width for better aesthetics
+    height: 160, // reduced height for better aesthetics
+    marginTop: 10,
     marginLeft: 10,
     marginRight: 10,
+    borderRadius: 10, // rounded corners
     borderWidth: 0,
   },
   flipSide: {
     flex: 1,
     flexDirection: "column",
     justifyContent: "center",
+    padding: 10, // padding for better spacing
   },
   face: {
-    fontSize: 40,
+    fontSize: 30, // adjusted font size
     color: Red,
+    textAlign: "center",
   },
   back: {
-    fontSize: 40,
+    fontSize: 30, // adjusted font size
     color: Green,
+    textAlign: "center",
   },
 
   /*
@@ -215,4 +224,26 @@ marginTop:"20%",
     height: 50,
     marginBottom: 10,
   },
+
+  resultTitle: {
+    fontSize: 30,
+    fontWeight: "bold",
+    marginTop: 20,
+    marginBottom: 20,
+    textAlign: "center",
+  },
+  resultText: {
+    fontSize: 20,
+    textAlign: "center",
+    marginTop: 5,
+  },
+  resultSubtitle: {
+    fontSize: 25,
+    fontWeight: "bold",
+    marginTop: 10,
+    textAlign: "center",
+  },
+
+ 
 });
+

@@ -15,8 +15,9 @@ const CustomTextInput = ({ placeholder, onChangeText, value }) => {
 
 const styles = StyleSheet.create({
   container: {
+    margin: "8%",
     paddingHorizontal: 10,
-    borderColor: 'gray',
+    borderColor: '#313d44',
     borderWidth: 3,
     borderRadius: 5,
     width: '80%',

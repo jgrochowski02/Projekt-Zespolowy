@@ -4,6 +4,7 @@ import History from "../views/History";
 import Flashcards from "../views/Flashcards";
 import Description from "../views/Description";
 import flashcard from "../views/Flashcards/flashcard";
+import Results from "../views/Flashcards/Results"; 
 
 const Stack = createNativeStackNavigator();
 
@@ -31,6 +32,7 @@ export default function StackNav() {
         component={flashcard}
         options={optionScreen}
       />
+      <Stack.Screen name="Results" component={Results} options={optionScreen} />
     </Stack.Navigator>
   );
 }

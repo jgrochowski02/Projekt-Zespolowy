@@ -16,9 +16,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   rectangle: {
+    marginTop: "10%",
     width: 150,
     height: 100,
-    backgroundColor: '#4A83CF',
+    backgroundColor: '#00668c',
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 10,

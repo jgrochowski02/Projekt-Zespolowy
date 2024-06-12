@@ -8,6 +8,7 @@ import styles from '../../utils/styles';
 import History from '../History';
 import Flashcards from '../Flashcards';
 import Description from '../Description';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
 export function Home({ navigation }) {
    
@@ -33,25 +34,27 @@ export function Home({ navigation }) {
             </View>
 
             <View style={{marginTop: '10%', flexDirection: 'row', justifyContent: 'space-around' }}>
-           <CustomButton text="Historia" onPress={handlePressHistory}/>
+           {/* <CustomButton text="Historia" onPress={handlePressHistory}/> */}
            <CustomButton text="Fiszki" onPress={handlePressFlashcards}/>
         </View>
-        
-        <View style={{marginTop: '10%', marginBottom: '1%', flexDirection: 'row', justifyContent: 'space-around' }}>
+        <CustomTextInput/>
+        <View style={{marginTop: '2%', marginBottom: '1%', flexDirection: 'row', justifyContent: 'space-around' }}>
            
            <ImageButton
-        imageSource={require('../../../public/Poland.png')}
-      />
+        imageSource={require('../../../public/poland1.png')}
+        />
        <ImageButton
-        imageSource={require('../../../public/UK.png')}
+        imageSource={require('../../../public/united-kingdom1.png')}
       />
         </View>
        
-        <CustomTextInput/>
 
-        <Button title="Szukaj" color="#000000"
-        onPress={handlePressDescription}
-         />
+<TouchableOpacity style={styles.button} onPress={handlePressDescription}>
+  <View style={styles.buttonContent}>
+  <Text style={styles.text}>Szukaj</Text>
+    </View>
+</TouchableOpacity>
+
        
         </View>
     );

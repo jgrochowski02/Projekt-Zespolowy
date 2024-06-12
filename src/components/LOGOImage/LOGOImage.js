@@ -5,7 +5,7 @@ const LOGOImage = () => {
   return (
     <View style={styles.container}>
       <Image
-        source={require('../../../public/LOGO.png')} // Ścieżka do twojego zdjęcia
+        source={require('../../../public/Dictionary.png')} // Ścieżka do twojego zdjęcia
         style={styles.image}
       />
     </View>
@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     flexDirection: 'column',
-    marginTop: '30%',
+    marginTop: '40%',
     marginBottom: '20%'
 
   },

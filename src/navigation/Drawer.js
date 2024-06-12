@@ -1,6 +1,6 @@
 import React from "react";
 import { createDrawerNavigator } from "@react-navigation/drawer";
-
+import Results from "../views/Flashcards/Results";
 import Home from "../views/Home/index";
 import History from "../views/History/index";
 import Flashcards from "../views/Flashcards/index";
@@ -17,6 +17,7 @@ export default function DrawerNav() {
       <Drawer.Screen name="Flashcards" component={Flashcards} />
       <Drawer.Screen name="Description" component={Description} />
       <Drawer.Screen name="Fiszka" component={flashcard} />
+    <Drawer.Screen name="Results" component={Results} />
     </Drawer.Navigator>
   );
 }

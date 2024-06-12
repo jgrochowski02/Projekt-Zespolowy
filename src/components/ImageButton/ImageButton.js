@@ -1,5 +1,5 @@
-import React from 'react';
-import { TouchableOpacity, Image, Text, View, StyleSheet } from 'react-native';
+import React from "react";
+import { TouchableOpacity, Image, Text, View, StyleSheet } from "react-native";
 
 const ImageButton = ({ onPress, imageSource, buttonText }) => {
   return (
@@ -14,21 +14,29 @@ const ImageButton = ({ onPress, imageSource, buttonText }) => {
 
 const styles = StyleSheet.create({
   button: {
-    backgroundColor: '#4A83CF',
-    borderRadius: 10,
-    padding: 10,
+    backgroundColor: "#00668c",
+    borderRadius: 20,
+    padding: 15,
+    height: 50,
+    margin: 10,
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 5,
   },
   buttonContent: {
-    justifyContent: 'space-around',
-    
+    alignItems: "center",
+    justifyContent: "center",
   },
   image: {
     width: 40,
-    height: 20,
+    height: 40,
   },
   text: {
-    fontSize: 16,
-    fontWeight: 'bold',
+    fontSize: 18,
+    fontWeight: "bold",
+    color: "white",
   },
 });
 
